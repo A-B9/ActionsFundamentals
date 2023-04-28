@@ -1,6 +1,7 @@
 name: Demo Container action
 
 on:
+  workflow_dispatch:    
   push:
     paths: .github/workflows/demo-container-action.yml
 

@@ -8,7 +8,7 @@ jobs:
   container_action:
     runs-on: ubuntu-latest
     steps:
-      - uses: lfraile-git-school/container-action@main
+      - uses: wulfland/hello-world-docker-action@main
         id: hello-action
         with:
           myInput: "Luis Fraile"

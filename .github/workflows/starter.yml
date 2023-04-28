@@ -86,7 +86,7 @@ jobs:
       
       - name: Display documentation
         run: tree
-        working-directory: docs
+        working-directory: .
   
   job_2:
     runs-on: ubuntu-latest

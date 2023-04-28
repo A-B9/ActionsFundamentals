@@ -1,7 +1,8 @@
 name: Demo Container action
 
 on:
-  workflow_dispatch:
+  push:
+    paths: .github/workflows/demo-container-action.yml
 
 jobs:
   container_action:
@@ -12,4 +13,4 @@ jobs:
         with:
           myInput: "Luis Fraile"
       - name: Output time
-        run: echo "The time is ${{ steps.hello-action.outputs.time }}
+        run: echo "The time is ${{ steps.hello-action.outputs.time }}"

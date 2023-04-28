@@ -8,5 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: lfraile-git-school/container-action@main
+        id: hello-action
         with:
           myInput: "Luis Fraile"
+      - name: Output time
+        run: echo "The time is ${{ steps.hello-action.outputs.time }}

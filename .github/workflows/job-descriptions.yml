@@ -8,9 +8,10 @@ on:
 
 jobs:  
   simple_summary:
-    environment: 
-      name: demo_amadeus
-      url: https://github.com/lfraile-git-school
+    strategy:
+      matrix:
+        environment_to_deploy: [ test, demo-amadeus]
+    environment: ${{ matrix.environment_to_deploy }}
     runs-on: ubuntu-latest
     steps:
       - run: echo '### Hello  world! :rocket:' >> $GITHUB_STEP_SUMMARY
